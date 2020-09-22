@@ -24,7 +24,7 @@ namespace webservice.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.WebService1Soap")]
     public interface WebService1Soap {
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento CalculoSueldoResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ident del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculoSueldo", ReplyAction="*")]
         webservice.ServiceReference1.CalculoSueldoResponse CalculoSueldo(webservice.ServiceReference1.CalculoSueldoRequest request);
         
@@ -64,22 +64,38 @@ namespace webservice.ServiceReference1 {
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
     public partial class CalculoSueldoRequestBody {
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string ident;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string apellidos;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string cargo;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
         public int sueldo;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
         public int domingos;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
         public int fallas;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        [System.Runtime.Serialization.DataMemberAttribute(Order=7)]
         public int horasext;
         
         public CalculoSueldoRequestBody() {
         }
         
-        public CalculoSueldoRequestBody(int sueldo, int domingos, int fallas, int horasext) {
+        public CalculoSueldoRequestBody(string ident, string nombre, string apellidos, string cargo, int sueldo, int domingos, int fallas, int horasext) {
+            this.ident = ident;
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.cargo = cargo;
             this.sueldo = sueldo;
             this.domingos = domingos;
             this.fallas = fallas;
@@ -111,12 +127,12 @@ namespace webservice.ServiceReference1 {
     public partial class CalculoSueldoResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string CalculoSueldoResult;
+        public webservice.ServiceReference1.ArrayOfString CalculoSueldoResult;
         
         public CalculoSueldoResponseBody() {
         }
         
-        public CalculoSueldoResponseBody(string CalculoSueldoResult) {
+        public CalculoSueldoResponseBody(webservice.ServiceReference1.ArrayOfString CalculoSueldoResult) {
             this.CalculoSueldoResult = CalculoSueldoResult;
         }
     }
@@ -369,9 +385,13 @@ namespace webservice.ServiceReference1 {
             return base.Channel.CalculoSueldo(request);
         }
         
-        public string CalculoSueldo(int sueldo, int domingos, int fallas, int horasext) {
+        public webservice.ServiceReference1.ArrayOfString CalculoSueldo(string ident, string nombre, string apellidos, string cargo, int sueldo, int domingos, int fallas, int horasext) {
             webservice.ServiceReference1.CalculoSueldoRequest inValue = new webservice.ServiceReference1.CalculoSueldoRequest();
             inValue.Body = new webservice.ServiceReference1.CalculoSueldoRequestBody();
+            inValue.Body.ident = ident;
+            inValue.Body.nombre = nombre;
+            inValue.Body.apellidos = apellidos;
+            inValue.Body.cargo = cargo;
             inValue.Body.sueldo = sueldo;
             inValue.Body.domingos = domingos;
             inValue.Body.fallas = fallas;

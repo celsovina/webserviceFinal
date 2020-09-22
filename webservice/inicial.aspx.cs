@@ -13,7 +13,7 @@ namespace webservice
         {
 
         }
-        List<string> Persona = new List<string>();
+        List<string> Datos = new List<string>();
         List<string> Deducciones = new List<string>();
         List<string> Devengados = new List<string>();
         string SueldoTotal;
@@ -23,11 +23,21 @@ namespace webservice
         {
             ValorSueldo = Convert.ToInt32(LabelSueldo.Text);
             ServiceReference1.WebService1SoapClient Servicio1 = new ServiceReference1.WebService1SoapClient();
-            SueldoTotal = Servicio1.CalculoSueldo(ValorSueldo, Convert.ToInt32(DropDownListDom.SelectedValue), Convert.ToInt32(fallas.Text), Convert.ToInt32(horasext.Text));
-            Persona = Servicio1.Persona(txtIdent.Text, Nombre.Text, Apellido.Text, DropDownListCargo.SelectedValue);
-            Deducciones = Servicio1.Deducciones(fallas.Text);
-            Devengados = Servicio1.Devengados(DropDownListDom.SelectedValue);
-            string Salud = Deducciones[1]; 
+            Datos = Servicio1.CalculoSueldo(txtIdent.Text, Nombre.Text, Apellido.Text, DropDownListCargo.SelectedValue, Convert.ToInt32(LabelSueldo.Text),
+                Convert.ToInt32(DropDownListDom.SelectedValue), Convert.ToInt32(fallas.Text), Convert.ToInt32(horasext.Text));
+            id.Text = Datos[0];
+            nomb.Text = Datos[1]; 
+            carg.Text = Datos[2]; 
+            sueldo.Text = Datos[3];
+            dom.Text = Datos[4]; 
+            he.Text = Datos[5];  
+            TotDed.Text = Datos[6];
+            st.Text = Datos[7];
+            f.Text = Datos[8]; 
+            p.Text = Datos[9]; 
+            s.Text = Datos[10];
+            TotDev.Text = Datos[11];
+            qt.Text = Datos[12];
         }
 
         protected void DropDownListCargo_SelectedIndexChanged(object sender, EventArgs e)

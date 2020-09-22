@@ -5,6 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="icon" type="image/png" href="logo.png">
         <title>Calculo de Nomina</title>
     </head>
     <body>
@@ -63,15 +64,15 @@
             <div class="cuerpo">
                 <div class="detalle">
                     <label for="id">Documento:</label>
-                    <asp:Label CssClass="label" Id="id" Text="123456789" runat="server"></asp:Label>
+                    <asp:Label CssClass="label" Id="id" Text="" runat="server"></asp:Label>
                     <br />
                     <label for="nomb">Nombre:</label>
-                    <asp:Label CssClass="label" Id="nomb" Text="123456789" runat="server"></asp:Label>
+                    <asp:Label CssClass="label" Id="nomb" Text="" runat="server"></asp:Label>
                     <br />
                     <label for="carg">Cargo:</label>
-                    <asp:Label CssClass="label" Id="carg" Text="123456789" runat="server"></asp:Label>
+                    <asp:Label CssClass="label" Id="carg" Text="" runat="server"></asp:Label>
                     <label for="sueldo">Sueldo:</label>
-                    <asp:Label CssClass="label" Id="sueldo" Text="123456789" runat="server"></asp:Label>
+                    <asp:Label CssClass="label" Id="sueldo" Text="" runat="server"></asp:Label>
                 </div>
                 <div class="detalle2">
                     <label for="dom">Domingos:</label>
@@ -79,9 +80,13 @@
                     <label for="st">Sub. transporte:</label>
                     <br />
                     
-                    <asp:Label CssClass="label2" Id="dom" Text="123456789" runat="server"></asp:Label>
-                    <asp:Label CssClass="label2" Id="he" Text="123456789" runat="server"></asp:Label>
-                    <asp:Label CssClass="label2" Id="st" Text="123456789" runat="server"></asp:Label>
+                    <asp:Label CssClass="label2" Id="dom" Text="" runat="server"></asp:Label>
+                    <asp:Label CssClass="label2" Id="he" Text="" runat="server"></asp:Label>
+                    <asp:Label CssClass="label2" Id="st" Text="" runat="server"></asp:Label>
+                </div>
+                <div class="detallet">
+                    <label for="qt">Total Devengado:</label>
+                    <asp:Label CssClass="labelt" Id="TotDev" Text="" runat="server"></asp:Label>
                 </div>
                 <div class="detalle3">
                     <label for="f">Fallas:</label>
@@ -90,16 +95,21 @@
                     <br />
 
                     
-                    <asp:Label CssClass="label2" Id="f" Text="123456789" runat="server"></asp:Label>
-                    <asp:Label CssClass="label2" Id="p" Text="123456789" runat="server"></asp:Label>
-                    <asp:Label CssClass="label2" Id="s" Text="123456789" runat="server"></asp:Label>
+                    <asp:Label CssClass="label2" Id="f" Text="" runat="server"></asp:Label>
+                    <asp:Label CssClass="label2" Id="p" Text="" runat="server"></asp:Label>
+                    <asp:Label CssClass="label2" Id="s" Text="" runat="server"></asp:Label>
                 </div>
                 <div class="detallet">
-                    <label for="qt">Quincena total:</label>
-                    <asp:Label CssClass="labelt" Id="qt" Text="123456789" runat="server"></asp:Label>
+                    <label for="qt">Total Deduciones:</label>
+                    <asp:Label CssClass="labelt" Id="TotDed" Text="" runat="server"></asp:Label>
+                    <br />
+                    <label for="qt">Pago Total:</label>
+                    <asp:Label CssClass="labelt" Id="qt" Text="" runat="server"></asp:Label>
+                    <br />
                 </div>
             </div>
             <div class="pie">
+                <br /> <br />
                 <p>Desarrollado por Celso Viña y Vincent Cristancho</p>
                 <p>Todos los derechos reservados 2020&copy;</p>
             </div>
@@ -150,7 +160,8 @@
         align-items:center;
         float:left;
         margin-left:10%;
-        width: 670px;
+        width: 700px;
+        height: 700px;
         margin-top: 5%;
         border-radius:15px;
         background: #999;
@@ -246,7 +257,8 @@
 
         .detallet{
             margin-left:50%;
-            margin-top:30px;
+            margin-top:15px;
+            height:25px;
         }
         .labelt{
             margin-left:20px;

@@ -168,6 +168,15 @@ namespace webservice
         protected global::System.Web.UI.WebControls.Label st;
 
         /// <summary>
+        /// Control TotDev.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TotDev;
+
+        /// <summary>
         /// Control f.
         /// </summary>
         /// <remarks>
@@ -193,6 +202,15 @@ namespace webservice
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label s;
+
+        /// <summary>
+        /// Control TotDed.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TotDed;
 
         /// <summary>
         /// Control qt.

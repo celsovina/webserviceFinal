@@ -29,10 +29,13 @@ namespace webservice
         int Desc = 0;
 
 
-
         [WebMethod]
-        public string CalculoSueldo(int sueldo, int domingos, int fallas, int horasext)
+        public List<string> CalculoSueldo(string ident, string nombre, string apellidos, string cargo, int sueldo, int domingos, int fallas, int horasext)
         {
+            List<string> DatosNomina = new List<string>();
+            DatosNomina.Add(ident);
+            DatosNomina.Add(nombre + " " + apellidos);
+            DatosNomina.Add(cargo);
             VDia = sueldo / 30;
             VHOrd = VDia / 8;
             Conv = VHOrd * 1.25; VHExt = (int)Conv;
@@ -51,7 +54,7 @@ namespace webservice
             if (fallas != 0)
             {
                 DescDias = fallas * VDia;
-                TotDev = TotDev - DescDias; //Devengados
+                TotDed = TotDed + DescDias; //Devengados
             }
 
             TotHrExt = horasext * VHExt;
@@ -61,9 +64,18 @@ namespace webservice
             TotDev = TotDev + TotDom; //Devengados
             SalTot = TotDev - TotDed;
 
-            string Datos;
-            Datos = SalTot.ToString();
-            return Datos;
+            DatosNomina.Add("$ " + sueldo.ToString());//3
+            DatosNomina.Add("$ " + TotDom.ToString());//4
+            DatosNomina.Add("$ " + TotHrExt.ToString()); //5
+            DatosNomina.Add("$ " + TotDed.ToString()); //6
+            DatosNomina.Add("$ " + SubTr.ToString()); //7
+            DatosNomina.Add("$ " + DescDias.ToString()); //8
+            DatosNomina.Add("$ " + Pension.ToString()); //9
+            DatosNomina.Add("$ " + Salud.ToString()); //10
+            DatosNomina.Add("$ " + TotDev.ToString()); //11
+            DatosNomina.Add("$ " + SalTot.ToString()); //12
+
+            return DatosNomina;
         }
         [WebMethod]
         public List<string> Persona(string ident, string nombre, string apellidos, string cargo)
