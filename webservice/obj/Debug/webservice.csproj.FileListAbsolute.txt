@@ -1,0 +1,7 @@
+C:\Users\celso\source\repos\webservice\webservice\bin\webservice.dll.config
+C:\Users\celso\source\repos\webservice\webservice\bin\webservice.dll
+C:\Users\celso\source\repos\webservice\webservice\bin\webservice.pdb
+C:\Users\celso\source\repos\webservice\webservice\obj\Debug\webservice.csprojAssemblyReference.cache
+C:\Users\celso\source\repos\webservice\webservice\obj\Debug\webservice.csproj.CoreCompileInputs.cache
+C:\Users\celso\source\repos\webservice\webservice\obj\Debug\webservice.dll
+C:\Users\celso\source\repos\webservice\webservice\obj\Debug\webservice.pdb
