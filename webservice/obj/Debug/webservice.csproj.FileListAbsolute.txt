@@ -5,3 +5,10 @@ C:\Users\celso\source\repos\webservice\webservice\obj\Debug\webservice.csprojAss
 C:\Users\celso\source\repos\webservice\webservice\obj\Debug\webservice.csproj.CoreCompileInputs.cache
 C:\Users\celso\source\repos\webservice\webservice\obj\Debug\webservice.dll
 C:\Users\celso\source\repos\webservice\webservice\obj\Debug\webservice.pdb
+C:\Users\Usuario\Desktop\Desarrollo de Software\Ciclo 7\Sistemas Integrados\ServiceFinal\webserviceFinal\webservice\bin\webservice.dll.config
+C:\Users\Usuario\Desktop\Desarrollo de Software\Ciclo 7\Sistemas Integrados\ServiceFinal\webserviceFinal\webservice\bin\webservice.dll
+C:\Users\Usuario\Desktop\Desarrollo de Software\Ciclo 7\Sistemas Integrados\ServiceFinal\webserviceFinal\webservice\bin\webservice.pdb
+C:\Users\Usuario\Desktop\Desarrollo de Software\Ciclo 7\Sistemas Integrados\ServiceFinal\webserviceFinal\webservice\obj\Debug\webservice.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Desarrollo de Software\Ciclo 7\Sistemas Integrados\ServiceFinal\webserviceFinal\webservice\obj\Debug\webservice.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Desarrollo de Software\Ciclo 7\Sistemas Integrados\ServiceFinal\webserviceFinal\webservice\obj\Debug\webservice.dll
+C:\Users\Usuario\Desktop\Desarrollo de Software\Ciclo 7\Sistemas Integrados\ServiceFinal\webserviceFinal\webservice\obj\Debug\webservice.pdb

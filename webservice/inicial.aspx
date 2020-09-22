@@ -42,9 +42,8 @@
                     <label for="uname">Apellido:</label>
                     <asp:TextBox type="text" class="form-control" id="Apellido" runat="server" placeholder="Ingrese sus apellidos" Width="300px" TabIndex="3" ></asp:TextBox>  
 
-                    <label for="uname">Sueldo:</label>
-                    <asp:TextBox type="number" class="form-control" id="TextBoxSueldo" runat="server" placeholder="Este es su sueldo" Width="300px" BackColor="White" Enabled="False" TabIndex="7" required></asp:TextBox>
-
+                    <label for="uname">Sueldo:</label><br />
+                    <asp:Label ID="LabelSueldo" runat="server" Text="Este es su sueldo"></asp:Label><br />
                     <label for="uname">Fallas injustificadas:</label>
                     <asp:TextBox type="number" class="form-control" id="fallas" runat="server" placeholder="Digite cuantas fallas injustificadas tiene" Width="300px" TabIndex="8"></asp:TextBox>  
                 </div><br />

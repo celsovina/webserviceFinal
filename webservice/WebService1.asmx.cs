@@ -54,18 +54,12 @@ namespace webservice
                 TotDev = TotDev - DescDias; //Devengados
             }
 
-
-
             TotHrExt = horasext * VHExt;
             TotDom = domingos * VDom; // Domingos Trabajados
-
-
 
             TotDev = TotDev + TotHrExt; // Horas Extras
             TotDev = TotDev + TotDom; //Devengados
             SalTot = TotDev - TotDed;
-
-
 
             string Datos;
             Datos = SalTot.ToString();

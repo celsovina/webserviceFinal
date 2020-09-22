@@ -13,12 +13,21 @@ namespace webservice
         {
 
         }
-
+        List<string> Persona = new List<string>();
+        List<string> Deducciones = new List<string>();
+        List<string> Devengados = new List<string>();
+        string SueldoTotal;
+        int ValorSueldo;
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            ValorSueldo = Convert.ToInt32(LabelSueldo.Text);
             ServiceReference1.WebService1SoapClient Servicio1 = new ServiceReference1.WebService1SoapClient();
-
+            SueldoTotal = Servicio1.CalculoSueldo(ValorSueldo, Convert.ToInt32(DropDownListDom.SelectedValue), Convert.ToInt32(fallas.Text), Convert.ToInt32(horasext.Text));
+            Persona = Servicio1.Persona(txtIdent.Text, Nombre.Text, Apellido.Text, DropDownListCargo.SelectedValue);
+            Deducciones = Servicio1.Deducciones(fallas.Text);
+            Devengados = Servicio1.Devengados(DropDownListDom.SelectedValue);
+            string Salud = Deducciones[1]; 
         }
 
         protected void DropDownListCargo_SelectedIndexChanged(object sender, EventArgs e)
@@ -27,37 +36,16 @@ namespace webservice
             switch (Cargo)
             {
                 case "Asesor":
-                    TextBoxSueldo.Text = "877900";
+                    LabelSueldo.Text = "877900";
                     break;
                 case "Mercaderista":
-                    TextBoxSueldo.Text = "1100900";
+                    LabelSueldo.Text = "1100900";
                     break;
                 case "Supervisor":
-                    TextBoxSueldo.Text = "1609900";
+                    LabelSueldo.Text = "1609900";
                     break;
                 case "Coordinador":
-                    TextBoxSueldo.Text = "2100900";
-                    break;
-
-            }
-        }
-
-        protected void DropDownListCargo_TextChanged(object sender, EventArgs e)
-        {
-            string Cargo = DropDownListCargo.SelectedValue;
-            switch (Cargo)
-            {
-                case "Asesor":
-                    TextBoxSueldo.Text = "877900";
-                    break;
-                case "Mercaderista":
-                    TextBoxSueldo.Text = "1100900";
-                    break;
-                case "Supervisor":
-                    TextBoxSueldo.Text = "1609900";
-                    break;
-                case "Coordinador":
-                    TextBoxSueldo.Text = "2100900";
+                    LabelSueldo.Text = "2100900";
                     break;
 
             }
